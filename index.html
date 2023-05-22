@@ -4,21 +4,17 @@
 	<meta charset="UTF-8"/>
 	<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="./main.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs="debugUIEnabled:false;">
         <a-assets>
             <a-asset-item id="obj" src="./assets/zunda_VRM.glb"></a-asset-item>
             <audio id="uta" src="./assets/zunda_uta.mp3" preload="auto"></audio>
-            <img id="start" src="./assets/start.png"></img>
-			<img id="stop" src="./assets/stop.png"></img>
         </a-assets>
         <a-marker type="pattern" url="./assets/pattern-zunda.patt">
             <a-entity gltf-model="#obj" rotation="-90 0 0"></a-entity>
         </a-marker>
         <a-sound id="my_sound01" src="#uta" position="0 1.2 -3" autoplay="false" loop="false"></a-sound>
-        <a-image id="my_btn01" src="#stop" position="0 1.2 -3" scale="0.3 0.3 0.3"></a-image>
         <a-entity camera></a-entity>
     </a-scene>
 </body>
