@@ -8,7 +8,7 @@
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs="debugUIEnabled:false;">
         <a-assets>
-            <a-asset-item id="obj" src="./assets/zunda_VRM.gltf"></a-asset-item>
+            <a-asset-item id="obj" src="./assets/zunda_VRM.glb"></a-asset-item>
             <audio id="uta" src="./assets/zunda_uta.mp3" preload="auto"></audio>
         </a-assets>
         <a-marker type="pattern" url="./assets/pattern-zunda.patt">
@@ -18,4 +18,7 @@
         <a-entity camera></a-entity>
     </a-scene>
 </body>
+<script>
+    document.querySelector("a-scene").renderer.gammaOutput=true;
+</script>
 </html>
