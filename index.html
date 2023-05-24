@@ -10,12 +10,11 @@
     <a-scene embedded arjs="debugUIEnabled:false;">
         <a-assets>
             <a-asset-item id="obj" src="./assets/zunda_VRM.glb"></a-asset-item>
-            <audio id="uta" src="./assets/zunda_uta.mp3" preload="auto"></audio>
         </a-assets>
         <a-marker type="pattern" url="./assets/pattern-zunda.patt">
-            <a-entity gltf-model="#obj" rotation="-90 0 0"></a-entity>
+            <a-entity cursor position="0 0 -5"></a-entity>
+            <a-entity gltf-model="#obj" rotation="-90 0 0" sound = "src: url(./assrts/zunda_uta.mp3); on: click"></a-entity>
         </a-marker>
-        <a-entity  sound = "src: #uta" > </a-entity >
         <a-entity camera></a-entity>
     </a-scene>
 </body>
